@@ -6,15 +6,63 @@ const storageName = "Player Results";
 const maxNumberOfHighScores = 10;
 const questions = [
   {
-    q: "1 + 1 = ?",
+    q: "Which of the following is NOT a primitive datatype?",
     a: [
-      "2", "3", "1", "0"
+      "Object", "Boolean", "Number", "String"
     ]
   },
   {
-    q: "2 + 2 = ?",
+    q: "The process of appending one string to another is called",
     a: [
-      "1", "2", "3", "4"
+      "Concatenation", "Declaration", "Delegation", "Comparison"
+    ]
+  },
+  {
+    q: "Which of the following is NOT an arithmetic operator?",
+    a: [ 
+      "===", "+", "%", "/"
+    ]
+  },
+  {
+    q: "Which of the following is NOT a comparison operator?",
+    a: [ 
+      "=>", "!=", ">", "=="
+    ]
+  },
+  {
+    q: "How is === different than == in JavaScript?",
+    a: [ 
+      "It checks for value AND datatype", "It reassigns a variable.", "It only checks for value NOT datatype.", "They both do the same thing."
+    ]
+  },
+  {
+    q: "What is the name for a collection of datatypes stored in a single variable?",
+    a: [
+      "Array", "Object", "Function", "Method"
+    ]
+  },
+  {
+    q: "If operators are used inside the variable we call it a",
+    a: [
+      "Expression", "Method", "Function", "Truthy"
+    ]
+  },
+  {
+    q: "Which of the following variables can you NOT reassign?",
+    a: [ 
+      "const", "let", "var", "i"
+    ]
+  },
+  {
+    q: "Why can we call functions before they are declared in JavaScript?",
+    a: [ 
+      "Hoisting", "Synchronous behavior", "Scope", "Properties"
+    ]
+  },
+  {
+    q: "Which logical operator evaluates to true only when both expressions are true?",
+    a: [ 
+      "&&", "||", "!", "?:"
     ]
   }
 ];
@@ -33,10 +81,10 @@ titleEl.text("Welcome player! Challenge your coding knowledge by answering all t
 mainEl.append(titleEl);
 var footerEl = $("footer");
 
-//wait for all HTML to load
-document.addEventListener("DOMContentLoaded", init);
+// Wait for the page to load up before running the initial function. 
+document.addEventListener("DOMContentLoaded", initial);
 
-function init() {
+function initial() {
 document.querySelector(".startGameBtn").addEventListener("click", startGame);
 showHighScores(); 
 }
